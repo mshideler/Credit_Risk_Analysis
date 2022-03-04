@@ -18,6 +18,12 @@ Imbalanced Classification Report
 
 ![ROS ICR](https://github.com/mshideler/Credit_Risk_Analysis/blob/main/Resources/ros_icr.png)
 
+- The balanced accuracy for the model is 66.2%, which isn't too bad.  Balanced accuracy is used here because to account for the imbalance between high credit card risk and low credit card risk.  It's the arithmetic mean of recall (true positive rate) and specificity (true negative rate).
+- Precision ("pre" column in the imbalanced classification report) is very high at 99%.
+- Recall ("rec" column in the imbalanced classification report) is okay at 60%.
+- The F1 score in the imbalanced classificaton looks good at 75%.
+- While the above metrics look good, they are misleading when taking into account that the precision and F1 score for high-risk applicants (group 0 in the imbalanced classification report) are practically 0.  This means this model isn't very precise when determining if an applicant is high-risk but great at predicting low-risk applicants.
+
 ### SMOTE Oversampling
 
 Balanced Accuracy
